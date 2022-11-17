@@ -22,10 +22,17 @@ function Recipe() {
           </div>
           <Info>
               <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={()=>{ setActiveTab('instructions')}}>Instructions</Button>
-              <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={()=>{ setActiveTab('ingredients')}}>Ingredients</Button>
-          <div>
+              <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => { setActiveTab('ingredients') }}>Ingredients</Button>
+              {activeTab === 'instructions' && (<div>
               <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
-          </div>
+              <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+              </div>) }
+            
+              {activeTab === 'ingredients' && (<ul>
+                  {details.extendedIngredients.map(item => {
+                      return <li key={item.id}>{item.original}</li>
+                  })}
+              </ul>)}
           </Info>
     </DetailWrapper>
   )
