@@ -1,11 +1,19 @@
-# Getting Started to Recipe App
+# General Information
 
-- This project is built with a youtebe react video, thanks to the [deved](http://youtube.com).
+This is a recipe application where you can see popular or vetegarian recipes for you next meal. Also, you can search recipes and find delicious meals.
 
-## `Available Scripts`
+## `Technical Information`
 
-- sadfasdf
+- I've used Reactjs to build this project. Besides that, couple of other libraries are used which are:
+  - - Splidejs
+  - - Framer-motion
+  - - Styled Components
+
+## `Recipe API`
+
+This project is using [Spoonacular](https://spoonacular.com/food-api) API.
 
 ### `To get started`
 
-- adsfadsfas
+- After downloading the project, you should make sure you add your Spoonacular api key to your `.env` file as follows;
+- - REACT_APP_API_KEY=<`your api key`>
